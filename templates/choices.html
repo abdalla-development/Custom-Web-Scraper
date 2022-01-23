@@ -1,0 +1,22 @@
+{% extends 'bootstrap/base.html' %}
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="/static/css/styles.css" >
+{% endblock %}
+{% block title %}Nutrition Value{% endblock %}
+{% block content %}
+<!-- Navbar as heading -->
+  <nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <span class="navbar-brand mb-0 h1 main-topic">Food Nutrition Value</span>
+    </div>
+  </nav>
+
+    <h3>Select From The List Below</h3>
+
+    {% for i in range(len): %}
+    <a class="btn btn-warning btn-lg" href="{{ url_for('choice_name', value=food_list[i]) }}" name="{{food_list[i]}}" role="button">{{food_list[i]}}</a><br><br>
+
+  {% endfor %}
+
+{% endblock %}

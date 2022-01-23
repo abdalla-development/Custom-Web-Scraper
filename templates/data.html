@@ -1,0 +1,116 @@
+{% extends 'bootstrap/base.html' %}
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="/static/css/styles.css" >
+{% endblock %}
+{% block title %}Nutrition Value{% endblock %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block content %}
+<!-- Navbar as heading -->
+  <nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <span class="navbar-brand mb-0 h1 main-topic">Food Nutrition Value</span>
+    </div>
+  </nav>
+<div class="d-md-flex h-md-100 align-items-center">
+
+    <!-- First Half -->
+    <div class="col-md-6 p-0 bg-indigo h-md-100">
+        <div class="text-white d-md-flex align-items-center h-100 p-5 text-center justify-content-center">
+            <div class="logoarea pt-5 pb-5">
+                <img src="{{figures['pie_chart']}}" alt="..." width="250" height="300"><br><br><br>
+                <img src="{{figures['bar_chart']}}" alt="..." width="250" height="300"><br><br><br>
+                <img src="{{figures['last_chart']}}" alt="..." width="250" height="300"><br><br><br>
+            </div>
+        </div>
+    </div>
+
+    <!-- Second Half -->
+    <div class="col-md-6 p-0 bg-white h-md-100 loginarea">
+        <div class="d-md-flex align-items-center h-md-100 p-5 justify-content-center">
+            <table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nutrition</th>
+      <th scope="col">Percentage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Portion Size</td>
+      <td>{{table_data['Portion Size']}}</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Calories</td>
+      <td>{{table_data['Calories']}}</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Total Fat</td>
+      <td>{{table_data['Total Fat']}}</td>
+    </tr>
+    <tr>
+      <th scope="row">4</th>
+      <td>Saturated Fat</td>
+      <td>{{table_data['Saturated Fat']}}</td>
+    </tr>
+    <tr>
+      <th scope="row">5</th>
+      <td>Cholesterol</td>
+      <td>{{table_data['Cholesterol']}}</td>
+    </tr>
+    <tr>
+      <th scope="row">6</th>
+      <td>Sodium</td>
+      <td>{{table_data['Sodium']}}</td>
+    </tr>
+    <tr>
+      <th scope="row">7</th>
+      <td>Total Carbohydrate</td>
+      <td>{{table_data['Total Carbohydrate']}}</td>
+    </tr>
+    <tr>
+      <th scope="row">8</th>
+      <td>Dietary Fiber</td>
+      <td>{{table_data['Dietary Fiber']}}</td>
+    </tr>
+  <tr>
+      <th scope="row">9</th>
+      <td>Sugar</td>
+      <td>{{table_data['Sugar']}}</td>
+    </tr>
+    <tr>
+      <th scope="row">10</th>
+      <td>Protein</td>
+      <td>{{table_data['Protein']}}</td>
+    </tr>
+    <tr>
+      <th scope="row">11</th>
+      <td>Vitamin D</td>
+      <td>{{table_data['Vitamin D']}}</td>
+    </tr>
+  <tr>
+      <th scope="row">12</th>
+      <td>Calcium</td>
+      <td>{{table_data['Calcium']}}</td>
+    </tr>
+    <tr>
+      <th scope="row">13</th>
+      <td>Iron</td>
+      <td>{{table_data['Iron']}}</td>
+    </tr>
+    <tr>
+      <th scope="row">14</th>
+      <td>Potassium</td>
+      <td>{{table_data['Potassium']}}</td>
+    </tr>
+  </tbody>
+</table>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

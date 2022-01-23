@@ -1,0 +1,27 @@
+{% extends 'bootstrap/base.html' %}
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="/static/css/styles.css" >
+{% endblock %}
+{% block title %}Nutrition Value{% endblock %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block content %}
+<!-- Navbar as heading -->
+  <nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <span class="navbar-brand mb-0 h1 main-topic">Food Nutrition Value</span>
+    </div>
+  </nav>
+<div class="container-fluid index align-items-center text-center">
+  <!-- Typing start card -->
+  <div class="card" style="width: 40rem; height: 27rem;">
+    <div class="card-body">
+      <h1>Check Your Food Nutrition Value</h1>
+        <p class="card-text">This is Powered By www.nutritionvalue.org</p>
+      <p class="card-text">Enter the food below </p>
+         <!-- This is where your WTForm will go -->
+      {{ wtf.quick_form(form) }}
+    </div>
+  </div>
+</div>
+{% endblock %}
